@@ -1,7 +1,7 @@
 # Recipes_Exercise-_Final
 
 
-<h1>Recipes Exercise</h1>
+<h2>Recipes Exercise</h2>
 
 Let's make a site for sharing recipes.
 
