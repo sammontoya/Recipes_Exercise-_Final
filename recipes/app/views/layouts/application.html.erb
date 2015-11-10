@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recipes</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js" %>
+</head>
+<body>
+  <div id = "user_nav" class = "maincolor">
+    <div id = "user_nav_container">
+      <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.email %></strong>.
+          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %> |
+          <%= link_to('Edit registration', edit_user_registration_path) %>
+      <% else %>
+          <%= link_to('Login', new_user_session_path)  %> |
+          <%= link_to('Register', new_user_registration_path)  %>
+      <% end %>
+    </div>
+  </div>
+
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, id: "flash_#{name}" %>
+  <% end %>
+
+
+<%= yield %>
+
+</body>
+</html>

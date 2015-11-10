@@ -1,0 +1,78 @@
+<div class = "container">
+<p id="notice"><%= notice %></p>
+
+<h2 class="maincolor bigfont">
+  <%= @recipe.title %>
+</h2>
+
+<p><span id="recipe_image">
+  <%= link_to image_tag(@recipe.image.url(:large)), @recipe.image.url %>
+</span></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @recipe.author %>
+</p>
+
+<p>
+  <strong>Ingredients:</strong>
+  <%= @recipe.ingredients %>
+</p>
+
+<p>
+  <strong>Instructions:</strong>
+  <%= @recipe.instructions %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <% @recipe.tags.each do |tag| %>
+  <%= tag.name %>,
+  <% end %>
+</p>
+
+<p>
+  <% if !@recipe.ratings.empty? %>
+    <strong>Average Ratings:</strong>
+    <%= @recipe.average_rating %>
+    <% else %>
+    <%= 'Not rated yet, be the first!' %>
+      <% end %>
+</p>
+
+
+<p class="maincolor">Add Rating</p>
+<form action= "/recipes/<%=@recipe.id%>/add_rating" method="post">
+    <select name="rating[number]">
+      <option value="">Please select</option>
+      <option value="1">1 Star</option>
+      <option value="2">2 Star</option>
+      <option value="3">3 Star</option>
+      <option value="4">4 Star</option>
+      <option value="5">5 Star</option>
+    </select>
+    <div class="actions">
+      <input type="submit" name="commit" value="Add Rating" />
+    </div>
+</form>
+
+<form action= "/recipes/<%=@recipe.id%>/add_tag" method="post">
+  <div class="field">
+    <label class="maincolor" for="tag_name" id="tag_name">Add Tag</label><br>
+    <input type="text" name="tag[name]" id="tag_name" />
+  </div>
+  <div class="actions">
+    <input type="submit" name="commit" value="Add Tag" />
+  </div>
+</form>
+
+<div class="mapboxcontainer">
+    <div id="googleMap" class="mapitem" style="width: 300px; height: 300px;"></div>
+</div>
+<%= link_to 'Home','/hello.html' %> |
+<%= link_to 'All Recipes', recipes_path %> |
+<%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %>
+
+
+
+</div>

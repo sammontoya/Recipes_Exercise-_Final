@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://localhost:3000/recipes -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Recipes</title>
+  <link rel="stylesheet" media="all" href="./Recipes_files/recipes.self-34d24c85b07c4723d495e0677ed20a3e7bf7895933138e55a3007609bd060b2f.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./Recipes_files/scaffolds.self-2e4db5a54103ac172d5599e87f703e6342ae6f7eeecaad32e160034a2592c226.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./Recipes_files/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./Recipes_files/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css" data-turbolinks-track="true">
+  <script src="./Recipes_files/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js" data-turbolinks-track="true"></script>
+<script src="./Recipes_files/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js" data-turbolinks-track="true"></script>
+<script src="./Recipes_files/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js" data-turbolinks-track="true"></script>
+<script src="./Recipes_files/recipes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="true"></script>
+<script src="./Recipes_files/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="true"></script>
+<script src="./Recipes_files/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="VaJpq1P6mT5D+/LdJa9KStZPbEnHkBL4yqQpsVx1dEpvAlVBPyhV4D9hsx/V04avhSbSdKQHHtzIimmgmChgGQ==">
+</head>
+<body data-pinterest-extension-installed="cr1.39.1" cz-shortcut-listen="true">
+  <div id="user_nav" class="maincolor">
+    <div id="user_nav_container">
+      Logged in as <strong>samantha@gmail.com</strong>.
+          <a rel="nofollow" data-method="delete" href="http://localhost:3000/users/logout">Logout</a> |
+          <a href="http://localhost:3000/users/edit">Edit registration</a>
+    </div>
+  </div>
+
+
+  <!-- <p class="notice"></p>
+  <p class="alert"></p> -->
+
+
+<p id="notice"></p>
+
+{"controller"=&gt;"recipes", "action"=&gt;"index"}
+
+<h1 class="bigfont maincolor">Listing Recipes</h1>
+<!--  We need to write something that sorts the table... recipe.ratings.average(:number).round(1)-->
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Image</th>
+      <th>Author</th>
+      <th>Ingredients</th>
+      <th>Instructions</th>
+      <th>Average Rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td>Tomato Soup</td>
+        <td><a href="http://localhost:3000/system/recipes/images/000/000/033/original/soup_1.jpg?1446585998"><img src="./Recipes_files/soup_1.jpg" alt="Soup 1"></a></td>
+        <td>sam</td>
+        <td>tomato, water, basil, salt</td>
+        <td>heat ingredients, bring to boil</td>
+
+        <td>
+          4.0
+        </td>
+        <td><a href="http://localhost:3000/recipes/33">Show</a></td>
+        <td><a href="http://localhost:3000/recipes/33/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/recipes/33">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Mushroom Soup</td>
+        <td><a href="http://localhost:3000/system/recipes/images/000/000/034/original/soup_2.jpg?1446586182"><img src="./Recipes_files/soup_2.jpg" alt="Soup 2"></a></td>
+        <td>Mike</td>
+        <td>Mushrooms, Water, Milk, Salt</td>
+        <td>heat ingredients, bring to boil, eat</td>
+
+        <td>
+          3.5
+        </td>
+        <td><a href="http://localhost:3000/recipes/34">Show</a></td>
+        <td><a href="http://localhost:3000/recipes/34/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/recipes/34">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Chef Salad</td>
+        <td><a href="http://localhost:3000/system/recipes/images/000/000/036/original/saladtoo.jpg?1446586529"><img src="./Recipes_files/saladtoo.jpg" alt="Saladtoo"></a></td>
+        <td>Mike</td>
+        <td>lettuce, tomatoes, carrots, mushrooms</td>
+        <td>combine ingredients in bowl, top with favorite dressing, enjoy</td>
+
+        <td>
+          3.0
+        </td>
+        <td><a href="http://localhost:3000/recipes/36">Show</a></td>
+        <td><a href="http://localhost:3000/recipes/36/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/recipes/36">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Chicken Pizza</td>
+        <td><a href="http://localhost:3000/system/recipes/images/000/000/035/original/pizza.jpg?1446586407"><img src="./Recipes_files/pizza.jpg" alt="Pizza"></a></td>
+        <td>sam</td>
+        <td>water, flour, cheese, chicken, spinach</td>
+        <td>make crust. top with toppings, heat, enjoy</td>
+
+        <td>
+          2.0
+        </td>
+        <td><a href="http://localhost:3000/recipes/35">Show</a></td>
+        <td><a href="http://localhost:3000/recipes/35/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/recipes/35">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Chicago Dog</td>
+        <td><a href="http://localhost:3000/system/recipes/images/000/000/037/original/hot-dog.jpg?1446586722"><img src="./Recipes_files/hot-dog.jpg" alt="Hot dog"></a></td>
+        <td>Sam</td>
+        <td>hot dog, bun, pickles, onions</td>
+        <td>grill dog, heat bun, add toppings</td>
+
+        <td>
+          1.0
+        </td>
+        <td><a href="http://localhost:3000/recipes/37">Show</a></td>
+        <td><a href="http://localhost:3000/recipes/37/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/recipes/37">Destroy</a></td>
+      </tr>
+  </tbody>
+</table>
+<br>
+
+<a href="http://localhost:3000/recipes/new">New Recipe</a>
+
+
+
+
+<div id="techsmith-snagitchrome-extension"></div><span style="height: 20px; width: 40px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: none; background-image: url(data:image/png;base64,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); background-color: transparent; background-size: 40px 20px;"></span></body></html>

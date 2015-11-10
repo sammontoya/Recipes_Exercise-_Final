@@ -1,0 +1,20 @@
+/* line 4, /Users/learn07/Desktop/Recipes_Exercise/recipes/app/assets/stylesheets/recipes.scss */
+h1, h2, h3, p {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* line 7, /Users/learn07/Desktop/Recipes_Exercise/recipes/app/assets/stylesheets/recipes.scss */
+.bigfont {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+/* line 12, /Users/learn07/Desktop/Recipes_Exercise/recipes/app/assets/stylesheets/recipes.scss */
+.maincolor {
+  color: orange;
+}
+
+/* line 15, /Users/learn07/Desktop/Recipes_Exercise/recipes/app/assets/stylesheets/recipes.scss */
+.container {
+  text-align: center;
+}
