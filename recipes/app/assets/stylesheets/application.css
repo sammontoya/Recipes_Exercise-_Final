@@ -13,15 +13,18 @@
  *= require_tree .
  *= require_self
  */
-
+li {
+  list-style: none;
+}
  .bigfont{
    font-size: 3em;
    font-weight: bold;
-
  }
+
  .maincolor{
    color:#3d1a06;
  }
+
  .container {
    text-align: center;
  }
@@ -53,18 +56,17 @@
    height: 310px;
    align-items: center;
  }
+
  .mapitem {
    width: 300px;  /* Or whatever */
    height: 300px; /* Or whatever */
    margin: auto;
  }
 
-
  #recipe_image {
    border-radius: 50px;
    background-color: orange;
    padding: 100px;
-
  }
 
  .background-photo-two{
@@ -87,7 +89,6 @@
    max-width: 80%;
  }
 
-
   .background-photo-three{
     background-image: url("images/basket.jpg");
     background-repeat: none;
@@ -106,4 +107,28 @@
     position:relative;
     min-width: 50%;
     max-width: 90%;
+  }
+
+  h1.bigfont.maincolor.recipe_pg_title{
+    text-align: center;
+    font-size: 5em;
+
+  }
+
+  #recipe_card{
+    background-color: gray;
+    border-radius: 25px;
+    display: inline-block;
+    height: 320px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    min-width: 25%;
+    max-width: 80%
+
+  }
+
+  h3.maincolor.recipe_card_title a{
+    color: black;
+    text-decoration: none;
   }
