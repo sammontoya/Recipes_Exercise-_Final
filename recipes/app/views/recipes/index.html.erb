@@ -4,11 +4,19 @@
 
 <h1 class="bigfont maincolor">All Recipes</h1>
 <div id="newest_recipes">
+
+
+
+  <% if !@newest_recipe.nil? %>
   <h3>Try Our Newest Recipes:</h3>
-  <ul>
-  <li> <%= @newest_recipe.title %></li>
-  <li><%= link_to image_tag(@newest_recipe.image.url(:large)), @newest_recipe.image.url %></li>
-</ul>
+    <ul>
+      <li> <%= @newest_recipe.title %></li>
+      <li><%= link_to image_tag(@newest_recipe.image.url(:large)), @newest_recipe.image.url %></li>
+    </ul>
+  <% else %>
+    <h3>No Recipes Found</h3>
+  <% end %>
+
 </div>
 
 <table>
